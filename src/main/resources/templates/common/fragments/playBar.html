@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="PlayBarFragment">
+<head>
+    <link rel="stylesheet" href="/static/CSS/playBar.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>s'>
+
+</head>
+<body>
+<!--Play bar Section-->
+<section class="playBar fixed-bottom ">
+    <div class="playBar-container position-relative my-5">
+        <div class="row">
+
+            <!--Play bar Icon-->
+            <div class="col-6">
+                <div class="btn-group top-0 start-50 translate-middle-x">
+                    <a href="#" class="btn btn-inverse"><i class="icon-white icon-fast-backward"></i></a>
+                    <a href="#" class="btn btn-inverse"><i class="icon-white icon-play"></i></a>
+                    <a href="#" class="btn btn-inverse"><i class="icon-white icon-pause"></i></a>
+                    <a href="#" class="btn btn-inverse"><i class="icon-white icon-fast-forward"></i></a>
+                </div>
+            </div>
+
+            <!--Play bar Track Information-->
+            <div class="col-6">
+                <div class="btn-group top-0 start-50 translate-middle-x">
+                    <a href="#" class="btn btn-inverse"><i> 현재 재생중 인 트랙</i></a>
+                    <a href="#" class="btn btn-inverse"><i> 가수 이름</i></a>
+                    <a href="#" class="btn btn-inverse"><i> 채널 이름</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
