@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="HeaderFragment">
+<head>
+
+</head>
+<body>
+<!--Navigation Bar-->
+<nav class="flex-div">
+    <div class="nav-left flex-div">
+        <!-- Side Bar Toggle -->
+        <img src="../assets/images/menuIcon.png" alt="" class="menu-icon">
+        <!-- Site Logo -->
+        <img src="../assets/images/logo.png" alt="" class="logo">
+    </div>
+
+    <!-- Search Box -->
+    <div class="nav-middle flex-div">
+        <div class="search-box flex-div">
+            <label>
+                <input type="text" placeholder="검색">
+            </label>
+            <img src="../assets/images/searchIcon.png" alt="" class="search-icon">
+        </div>
+    </div>
+
+    <!-- Member Profile -->
+    <div class="nav-right flex-div">
+        <img src="../assets/images/profilePicture.png" alt="" class="profile-picture">
+    </div>
+</nav>
+</body>
+</html>
