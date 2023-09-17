@@ -2,16 +2,17 @@
 <html lang="UTF-8" xmlns:th="http://www.thymeleaf.org"
       th:fragment="NavFragment">
 <head>
-
+    <!-- Navigation CSS -->
+    <link rel="stylesheet" href="/css/nav.css">
 </head>
 <body>
 <!--Navigation Bar-->
 <nav class="flex-div">
     <div class="nav-left flex-div">
         <!-- Side Bar Toggle Icon-->
-        <img src="../assets/images/menuIcon.png" alt="" class="menu-icon">
+        <img src="/assets/images/menuIcon.png" alt="" class="menu-icon">
         <!-- Site Logo Icon -->
-        <img src="../assets/images/logo.png" alt="" class="logo">
+        <img src="/assets/images/logo.png" alt="" class="logo">
     </div>
 
     <!-- Search Box -->
@@ -20,13 +21,13 @@
             <label>
                 <input type="text" placeholder="검색">
             </label>
-            <img src="../assets/images/searchIcon.png" alt="" class="search-icon">
+            <img src="/assets/images/searchIcon.png" alt="" class="search-icon">
         </div>
     </div>
 
     <!-- Member Profile Icon -->
     <div class="nav-right flex-div">
-        <img src="../assets/images/profilePicture.png" alt="" class="profile-picture">
+        <img src="/assets/images/profilePicture.png" alt="" class="profile-picture">
     </div>
 </nav>
 </body>
