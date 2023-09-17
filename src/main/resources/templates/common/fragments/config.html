@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org"
-      th:fragment="ConfigFragment">
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
 <head>
+<th:block th:fragment="ConfigFragment">
     <!-- Common Head -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
 
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
+    <!-- Home CSS -->
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+    <!-- Navigation CSS -->
+    <link th:href="@{/css/navBar.css}" rel="stylesheet">
+    <!-- Side Bar CSS -->
+    <link th:href="@{/css/sideBar.css}" rel="stylesheet">
+    <!-- Side Bar Toggle JS in Navigation -->
+    <script th:src="@{/static/js/navBar.js}" defer></script>
+</th:block>
 </head>
 <body>
 
-<!-- Common JS -->
-<script src="/javaScript/script.js"></script>
 </body>
 </html>
