@@ -2,29 +2,22 @@
 <html lang="UTF-8" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-
-<!-- Reference Common CSS / JS Elements -->
-<head th:replace="common/fragments/config :: ConfigFragment">
-
-    <!-- The place for JS of each page -->
-    <th:block layout:fragment="script"></th:block>
-    <!-- The place for CSS of each page -->
-    <th:block layout:fragment="css"></th:block>
+<head>
+    <!-- Reference Common CSS / JS Elements -->
+    <th:block th:replace="common/fragments/config :: ConfigFragment"></th:block>
 
 </head>
 <body>
-
     <!-- Reference NavFragment -->
-    <nav th:replace="common/fragments/navigation :: NavFragment"></nav>
+    <nav th:replace="common/fragments/navBar :: NavFragment"></nav>
 
     <!-- Reference SideBarFragment -->
-    <div th:replace="common/fragments/navigation :: NavFragment"></div>
+    <div th:replace="common/fragments/navBar :: NavFragment"></div>
 
     <!-- Reference Content fraction from each page -->
     <th:block layout:fragment="Content"></th:block>
 
     <!-- Reference PlayBarFragment -->
-
 
 </body>
 </html>
