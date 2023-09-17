@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="ConfigFragment">
 <head>
-<th:block th:fragment="ConfigFragment">
     <!-- Common Head -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
 
     <!-- Home CSS -->
-    <link th:href="@{/css/home.css}" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
     <!-- Navigation CSS -->
-    <link th:href="@{/css/navBar.css}" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navBar.css">
     <!-- Side Bar CSS -->
-    <link th:href="@{/css/sideBar.css}" rel="stylesheet">
+    <link rel="stylesheet" href="/css/sideBar.css">
     <!-- Side Bar Toggle JS in Navigation -->
-    <script th:src="@{/static/js/navBar.js}" defer></script>
-</th:block>
+    <script src="/static/js/navBar.js"></script>
+
 </head>
 <body>
 
