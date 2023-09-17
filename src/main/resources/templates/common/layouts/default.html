@@ -2,17 +2,16 @@
 <html lang="UTF-8" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
-    <!-- Reference Common CSS / JS Elements -->
-    <th:block th:replace="common/fragments/config :: ConfigFragment"></th:block>
+<!-- Reference Common CSS / JS Elements -->
+<head th:replace="~{common/fragments/config :: ConfigFragment}">
 
 </head>
 <body>
     <!-- Reference NavFragment -->
-    <nav th:replace="common/fragments/navBar :: NavFragment"></nav>
+    <div th:replace="~{common/fragments/navBar :: NavFragment}"></div>
 
     <!-- Reference SideBarFragment -->
-    <div th:replace="common/fragments/navBar :: NavFragment"></div>
+    <div th:replace="~{common/fragments/sideBar :: SideBarFragment}"></div>
 
     <!-- Reference Content fraction from each page -->
     <th:block layout:fragment="Content"></th:block>
