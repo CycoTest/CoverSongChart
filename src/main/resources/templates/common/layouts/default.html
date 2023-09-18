@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="UTF-8" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <!-- Reference Common CSS / JS Elements -->
-<head th:replace="~{common/fragments/config :: ConfigFragment}">
+<head th:insert="~{common/fragments/config :: ConfigFragment}">
 
 </head>
 <body>
-    <!-- Reference NavFragment -->
-    <div th:replace="~{common/fragments/navBar :: NavFragment}"></div>
+<!-- Reference NavFragment -->
+<div th:replace="~{common/fragments/navBar :: NavFragment}"></div>
 
-    <!-- Reference SideBarFragment -->
-    <div th:replace="~{common/fragments/sideBar :: SideBarFragment}"></div>
+<!-- Reference SideBarFragment -->
+<div th:replace="~{common/fragments/sideBar :: SideBarFragment}"></div>
 
-    <!-- Reference Content fraction from each page -->
-    <th:block layout:fragment="Content"></th:block>
+<!-- Reference Content fraction from each page -->
+<th:block layout:fragment="Content"></th:block>
 
-    <!-- Reference PlayBarFragment -->
+<!-- Reference PlayBarFragment -->
 
 </body>
 </html>
