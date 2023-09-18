@@ -55,7 +55,7 @@ nav {
 
 /* Sidebar left */
 .sidebar-left {
-    width: 0;
+    width: 0 !important;
 }
 
 .sidebar-left a p{

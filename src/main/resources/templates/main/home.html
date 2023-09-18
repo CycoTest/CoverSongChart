@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="UTF-8"
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{common/layouts/default}"
-      layout:fragment="Content">
+      layout:decorate="~{common/layouts/default}">
 <head>
+<th:block>
     <title>cloneYouTube</title>
+</th:block>
 </head>
 <body>
+<th:block layout:fragment="Content">
 <!--Main-->
 
 <!--Recent Track-->
 <div class="container">
-    <h2>
-        <p>최근에 들은 트랙</p>
-    </h2>
+    <h2>최근에 들은 트랙</h2>
 
     <div class="list-container">
         <div class="track-list">
@@ -63,12 +63,9 @@
     </div>
 </div>
 
-
 <!--Popular Charts-->
 <div class="container">
-    <h2>
-        <p>인기 차트</p>
-    </h2>
+    <h2>인기 차트</h2>
 
     <div class="list-container">
         <div class="track-list">
@@ -120,9 +117,7 @@
 
 <!--My Charts-->
 <div class="container">
-    <h2>
-        <p>내가 만든 플레이 리스트</p>
-    </h2>
+    <h2>내가 만든 플레이 리스트</h2>
 
     <div class="list-container">
         <div class="card track-list" style="width: 18rem;">
@@ -170,6 +165,6 @@
         </div>
     </div>
 </div>
-
+</th:block>
 </body>
 </html>
