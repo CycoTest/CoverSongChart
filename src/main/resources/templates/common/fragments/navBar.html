@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="NavFragment">
+<!--Navigation Bar-->
+<nav class="flex-div">
+    <div class="nav-left flex-div">
+        <!-- Side Bar Toggle Icon-->
+        <img src="/assets/images/menuIcon.png" alt="" class="menu-icon">
+        <!-- Site Logo Icon -->
+        <img src="/assets/images/logo.png" alt="" class="logo">
+    </div>
+
+    <!-- Search Box -->
+    <div class="nav-middle flex-div">
+        <div class="search-box flex-div">
+            <label>
+                <input type="text" placeholder="검색">
+            </label>
+            <img src="/assets/images/searchIcon.png" alt="" class="search-icon">
+        </div>
+    </div>
+
+    <!-- Member Profile Icon -->
+    <div class="nav-right flex-div">
+        <img src="/assets/images/profilePicture.png" alt="" class="profile-picture">
+    </div>
+</nav>
+</th:block>
+</html>
