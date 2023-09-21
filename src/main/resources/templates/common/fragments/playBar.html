@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<th:block th:fragment="PlayBarFragment">
+<!-- Music Play Bar -->
+<div class="music-player" >
+    <div class="song-bar">
+
+        <!-- Song Info -->
+        <div class="song-infos">
+            <div class="image-container">
+                <img src="https://d2y6mqrpjbqoe6.cloudfront.net/image/upload/f_auto,q_auto/media/library-400/216_636967437355378335Your_Lie_Small_hq.jpg" alt="" />
+            </div>
+            <div class="song-description">
+                <p class="title">
+                    Watashitachi wa Sou Yatte Ikite Iku Jinshu na no
+                </p>
+                <p class="artist">Masaru Yokoyama</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Controller -->
+    <div class="player-timeline" id="music-player">
+        <!-- Play Time -->
+        <span class="player-time player-time-current">00:00</span>
+        <!-- Control Button -->
+        <div class="control-buttons">
+            <i class='bx bx-skip-previous' ></i>
+            <button class="playButton" id="playButton">
+                <i class="bx bx-play" id="playIcon"></i>
+            </button>
+            <i class='bx bx-skip-next' ></i>
+        </div>
+
+        <!-- Music Progress Bar -->
+        <div class="player-progress" id="progress">
+            <div class="player-progress-filled" id="progress-container"></div>
+        </div>
+    </div>
+
+    <!-- Other Functions -->
+    <div class="other-features">
+        <i class='bx bx-volume-full' ></i>
+        <i class='bx bx-repeat'></i>
+        <i class='bx bx-shuffle' ></i>
+        <div class="volume-bar">
+            <i class="fas fa-volume-down"></i>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+    <audio src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/summer.mp3?raw=true"
+           id="audio"></audio>
+</div>
+</th:block>
+</html>

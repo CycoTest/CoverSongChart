@@ -1,18 +1,17 @@
 /* Sidebar */
-
 .sidebar{
     min-height: 100vh;
+    max-height: 100%;
     width: 78px;
     padding: 6px 14px;
-    z-index: 99;
+    z-index: 10;
     background-color: var(--color-default);
     transition: all .5s ease;
     position: fixed;
     top:0;
     left: 0;
-    border-right-style: solid; color:white;
+    border-right: 1px solid; color: lightgrey;
 }
-
 
 .sidebar.open{
     width: 250px;
@@ -108,7 +107,6 @@
     display: none;
 }
 
-
 .sidebar li a{
     display: flex;
     height: 100%;
@@ -169,7 +167,6 @@
 }
 
 
-
 .recent-section{
     position: relative;
     background-color: var(--color-body);
@@ -194,6 +191,7 @@
     left:250px;
     width: calc(100% - 250px);
 }
+
 
 .popular-section{
     position: relative;

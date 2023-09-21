@@ -1,0 +1,152 @@
+/* Music Player*/
+.music-player {
+    --primary-color: #ddd;
+    --secondary-color: #999;
+    --green-color: #2d5;
+    --padding: 1em;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+
+    height: 7rem;
+    padding: var(--padding);
+    color: var(--primary-color);
+}
+
+i{
+    color: var(--secondary-color);
+}
+
+i:hover{
+    color: var(--primary-color);
+}
+
+.song-bar {
+    position: absolute;
+    left: var(--padding);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 25%;
+}
+
+.song-infos {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+}
+
+.image-container {
+    --size: 4.5em;
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-description p {
+    margin: 0.2em;
+}
+
+.title,
+.artist {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.title:hover,
+.artist:hover {
+    text-decoration: underline;
+}
+
+.artist{
+    color: var(--secondary-color);
+}
+
+.icons{
+    display: flex;
+    gap: 1em;
+}
+
+.control-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.playButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+
+.playButton .bx-play {
+    font-size: 60px;
+}
+
+.playButton .bx-pause {
+    font-size: 60px;
+}
+
+
+/* Progress Bar */
+.player-timeline {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    z-index: 0;
+}
+
+.player-progress {
+    position: fixed;
+    height: 6px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: -100px;
+    margin-left: 75px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.player-progress-filled {
+    height: 100%;
+    background-color: red;
+    border-radius: 25px;
+    width: 0%;
+}
+
+.player-time {
+    padding: 2px 5px;
+}
+
+.other-features{
+    right: var(--padding);
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}

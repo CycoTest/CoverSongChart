@@ -13,7 +13,6 @@
     --color-light:#e0e0e0;
 }
 
-
 a{
     text-decoration: none;
     color: #5a5a5a;
@@ -30,28 +29,45 @@ img {
 
 /* Main */
 
-
 /* Headers */
 .recentHeader{
-    margin-left: 40px;
+    margin-left: 90px;
     color: white;
     margin-top: 50px;
 }
 
-.popularHeader {
-    margin-left: 40px;
+.recentLine {
+    margin-left: 90px;
+    margin-top: 10px;
     color: white;
+    width: 15%;
+}
 
+.popularHeader {
+    margin-left: 90px;
+    color: white;
+}
+
+.popularLine {
+    margin-left: 90px;
+    margin-top: 10px;
+    color: white;
+    width: 15%;
 }
 
 .myPlaylistHeader {
     margin-left: 40px;
     color: white;
+}
 
+.playlistLine {
+    margin-left: 90px;
+    margin-top: 10px;
+    color: white;
+    width: 15%;
 }
 
 /* Containers for Main Content*/
-
 .container-recent{
     background: var(--color-default);
     flex-grow: 1;
@@ -68,7 +84,6 @@ img {
 }
 
 
-
 .list-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, .1fr));
@@ -82,13 +97,10 @@ img {
     height: 300px;
 }
 
-
-
 .track-list {
     align-items: center;
     margin-top: 7px;
     min-height: 250px;
-
 }
 
 .track-list a {
@@ -106,7 +118,6 @@ img {
 
 
 /*Track Info*/
-
 .track-info {
     color: white;
     font-size: 13px;
