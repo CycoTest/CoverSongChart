@@ -3,7 +3,7 @@ nav {
     padding: 10px 2%;
     justify-content: space-between;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background: #fff;
+    background-color: var(--color-default);
     top: 0;
     width: 100%;
     position: fixed;
@@ -20,12 +20,10 @@ nav {
     margin-right: 25px;
 }
 
-.nav-left .logo {
-    width: 150px;
-}
 
 .nav-middle .search-box {
     border: 1px solid #ccc;
+    background-color: white;
     margin-right: 15px;
     padding: 8px 12px;
     border-radius: 25px;
@@ -50,24 +48,6 @@ nav {
 .nav-right .profile-picture {
     width: 35px;
     border-radius: 50%;
+    border-style: solid;
     margin-right: 0;
-}
-
-/* Sidebar left */
-.sidebar-left {
-    width: 0 !important;
-}
-
-.sidebar-left a p{
-    display: none;
-}
-
-.sidebar-left h3{
-    display: none;
-}
-
-.sidebar-left hr{
-    width: 50%;
-    margin-bottom: 25px;
-    align-items: center;
 }

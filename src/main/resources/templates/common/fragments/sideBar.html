@@ -2,23 +2,44 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <th:block th:fragment="SideBarFragment">
 <!-- Side Bar-->
-<div class="sideBar">
-  <!-- ShortCut Menu Icons -->
-  <div class="shortcut-links">
-    <a href=""><img src="/assets/images/homeIcon.png" alt="" ><p>Home</p></a>
-    <a href=""><img src="/assets/images/chartIcon.png" alt=""><p>Charts</p></a>
-    <a href=""><img src="/assets/images/storageIcon.png" alt=""><p>Storage</p></a>
-    <hr class="separator">
+<div class="sidebar">
+
+  <!-- Logo -->
+  <div class="logo_details">
+    <div class="logo_name">CsC</div>
+    <i class="bx bx-menu" id="btn"></i>
   </div>
 
-  <!--My Playlist-->
-  <div class="storage-list">
-    <h3>My Playlist</h3>
-    <a href="">  <img src="/assets/images/khalidTalk.png" alt=""><p>Playlist 1</p></a>
-    <a href="">  <img src="/assets/images/jcoleMiddleChild.png" alt=""><p>Playlist 2</p></a>
-    <a href="">  <img src="/assets/images/eminemEncore.png" alt=""> <p>Playlist 3</p></a>
-    <a href="">  <img src="/assets/images/paramoreRiot.png" alt=""><p>Playlist 4</p></a>
-  </div>
+  <!-- SideBar Contents -->
+  <ul class="nav-list">
+
+    <!-- Home -->
+    <li>
+      <a href="#">
+        <i class='bx bxs-home'></i>
+        <span class="link_name">Home</span>
+      </a>
+      <span class="tooltip">Home</span>
+    </li>
+
+    <!-- Charts -->
+    <li>
+      <a href="#">
+        <i class='bx bx-bar-chart-square'></i>
+        <span class="link_name">Charts</span>
+      </a>
+      <span class="tooltip">Chats</span>
+    </li>
+
+    <!-- Play List -->
+    <li>
+      <a href="#">
+        <i class='bx bxs-playlist'></i>
+        <span class="link_name">Play List</span>
+      </a>
+      <span class="tooltip">Play List</span>
+    </li>
+  </ul>
 </div>
 </th:block>
 </html>

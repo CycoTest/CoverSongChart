@@ -1,11 +1,23 @@
-const menuIcon = document.querySelector(".menu-icon");
-const sideBar = document.querySelector(".sideBar");
-const containers = document.querySelectorAll(".container");
+window.onload = function(){
+    const sidebar = document.querySelector(".sidebar");
+    const closeBtn = document.querySelector("#btn");
+    const searchBtn = document.querySelector(".bx-search")
 
-menuIcon.onclick = function () {
-    sideBar.classList.toggle("sidebar-left");
+    closeBtn.addEventListener("click",function(){
+        sidebar.classList.toggle("open")
+        menuBtnChange()
+    })
 
-    containers.forEach(function(container) {
-        container.classList.toggle("large-container");
-    });
+    searchBtn.addEventListener("click",function(){
+        sidebar.classList.toggle("open")
+        menuBtnChange()
+    })
+
+    function menuBtnChange(){
+        if(sidebar.classList.contains("open")){
+            closeBtn.classList.replace("bx-menu","bx-menu-alt-right")
+        }else{
+            closeBtn.classList.replace("bx-menu-alt-right","bx-menu")
+        }
+    }
 }
