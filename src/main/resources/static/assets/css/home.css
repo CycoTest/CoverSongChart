@@ -29,7 +29,7 @@ img {
 
 /* Main */
 
-/* Headers */
+/* Content headers */
 .recentHeader{
     margin-left: 90px;
     color: white;
@@ -67,6 +67,7 @@ img {
     width: 15%;
 }
 
+
 /* Containers for Main Content*/
 .container-recent{
     background: var(--color-default);
@@ -82,7 +83,6 @@ img {
     background: var(--color-default);
     flex-grow: 1;
 }
-
 
 .list-container {
     display: grid;
@@ -137,20 +137,20 @@ img {
 
 /* Cards */
 .track-list-card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 20px; /* 5px rounded corners */
+    border-radius: 20px;
     width: 300px;
     height: 300px;
     padding: 20px;
 }
 
+
 /* Color Container */
 .color-container {
-    width: 100%; /* Set the width of the container (adjust as needed) */
-    height: 200px; /* Set the height of the container (adjust as needed) */
-    background-color: var(--color-default); /* Set the background color using a color code or name */
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-default);
 }
 
 .color-container-top {
