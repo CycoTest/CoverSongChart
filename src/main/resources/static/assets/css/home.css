@@ -32,38 +32,38 @@ img {
 /* Headers */
 .recentHeader{
     margin-left: 90px;
-    color: white;
+    color: var(--color-white);
     margin-top: 50px;
 }
 
 .recentLine {
     margin-left: 90px;
     margin-top: 10px;
-    color: white;
+    color: var(--color-white);
     width: 15%;
 }
 
 .popularHeader {
     margin-left: 90px;
-    color: white;
+    color: var(--color-white);
 }
 
 .popularLine {
     margin-left: 90px;
     margin-top: 10px;
-    color: white;
+    color: var(--color-white);
     width: 15%;
 }
 
 .myPlaylistHeader {
-    margin-left: 40px;
-    color: white;
+    margin-left: 90px;
+    color: var(--color-white);
 }
 
 .playlistLine {
     margin-left: 90px;
     margin-top: 10px;
-    color: white;
+    color: var(--color-white);
     width: 15%;
 }
 
@@ -119,12 +119,12 @@ img {
 
 /*Track Info*/
 .track-info {
-    color: white;
+    color: var(--color-white);
     font-size: 13px;
 }
 
 .track-info a{
-    color: white;
+    color: var(--color-white);
     font-weight: 600;
     display: block;
     margin-bottom: 5px;
@@ -134,10 +134,8 @@ img {
     margin-top: 10px;
 }
 
-
 /* Cards */
 .track-list-card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 20px; /* 5px rounded corners */
@@ -148,9 +146,9 @@ img {
 
 /* Color Container */
 .color-container {
-    width: 100%; /* Set the width of the container (adjust as needed) */
-    height: 200px; /* Set the height of the container (adjust as needed) */
-    background-color: var(--color-default); /* Set the background color using a color code or name */
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-default);
 }
 
 .color-container-top {

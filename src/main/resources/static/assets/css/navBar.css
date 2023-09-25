@@ -8,7 +8,7 @@ nav {
     width: 100%;
     position: fixed;
     z-index: 10;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--color-white);;
 }
 
 .nav-left img{
@@ -22,8 +22,8 @@ nav {
 }
 
 .nav-middle .search-box {
-    border: 1px solid #ccc;
-    background-color: white;
+    border: 1px solid lightgrey;
+    background-color: var(--color-white);
     margin-right: 15px;
     padding: 8px 12px;
     border-radius: 25px;
