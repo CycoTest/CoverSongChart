@@ -32,38 +32,38 @@ img {
 /* Content headers */
 .recentHeader{
     margin-left: 90px;
-    color: white;
+    color: var(--color-white);
     margin-top: 50px;
 }
 
 .recentLine {
     margin-left: 90px;
     margin-top: 10px;
-    color: white;
+    color: var(--color-white);
     width: 15%;
 }
 
 .popularHeader {
     margin-left: 90px;
-    color: white;
+    color: var(--color-white);
 }
 
 .popularLine {
     margin-left: 90px;
     margin-top: 10px;
-    color: white;
+    color: var(--color-white);
     width: 15%;
 }
 
 .myPlaylistHeader {
-    margin-left: 40px;
-    color: white;
+    margin-left: 90px;
+    color: var(--color-white);
 }
 
 .playlistLine {
     margin-left: 90px;
     margin-top: 10px;
-    color: white;
+    color: var(--color-white);
     width: 15%;
 }
 
@@ -119,12 +119,12 @@ img {
 
 /*Track Info*/
 .track-info {
-    color: white;
+    color: var(--color-white);
     font-size: 13px;
 }
 
 .track-info a{
-    color: white;
+    color: var(--color-white);
     font-weight: 600;
     display: block;
     margin-bottom: 5px;
@@ -133,7 +133,6 @@ img {
 .track-info p {
     margin-top: 10px;
 }
-
 
 /* Cards */
 .track-list-card {
