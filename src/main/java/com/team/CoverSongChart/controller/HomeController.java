@@ -9,6 +9,6 @@ public class HomeController {
     @GetMapping(value = "/home")
     public String goHome() {
 
-        return "main/home";
+        return "views/home";
     }
 }
