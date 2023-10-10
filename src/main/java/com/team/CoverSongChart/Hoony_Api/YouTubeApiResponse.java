@@ -1,4 +1,4 @@
-package com.team.CoverSongChart.Hoony_Api.Dto;
+package com.team.CoverSongChart.Hoony_Api;
 
 import com.team.CoverSongChart.Hoony_Api.Dto.Dto_In.PageInfo;
 import com.team.CoverSongChart.Hoony_Api.Dto.Dto_In.VideoItem;
