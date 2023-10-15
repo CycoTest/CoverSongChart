@@ -1,4 +1,4 @@
-package com.team.CoverSongChart.Hoony_Api.Dto.Dto_In;
+package com.team.CoverSongChart.api.api_DTO.searchDTO.detail;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,10 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PageInfo {
-
     private int totalResults;
-
-    // 갯수 늘리기
-    private int resultsPerPage;
-
+    private int resultPerPage;
 }
