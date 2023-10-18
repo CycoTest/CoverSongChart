@@ -41,6 +41,12 @@ dependencies {
 	// Web client 이용_Hoonyyyy
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
+
+	// youtube api 관련사항
+	implementation 'com.google.api-client:google-api-client:1.31.5'
+	implementation 'com.google.apis:google-api-services-youtube:v3-rev222-1.25.0'
+
+
 }
 
 tasks.named('test') {
