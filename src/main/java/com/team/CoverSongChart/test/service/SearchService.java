@@ -5,6 +5,8 @@ import com.google.api.services.youtube.model.PlaylistItem;
 import com.google.api.services.youtube.model.PlaylistItemListResponse;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.VideoListResponse;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,10 @@ public class SearchService {
 
     public String searchAll(String keyword) throws IOException {
         YouTube.Search.List search = youtube.search().list("snippet");
-        search.setQ(keyword);
+
+        String searchQuery = keyword + "cover";
+
+        search.setQ(searchQuery);
         search.setType("video"); // 동영상 결과만 필터링
         search.setVideoCategoryId("10"); // "음악" 카테고리 ID 설정
 
@@ -28,10 +33,16 @@ public class SearchService {
         // 음악으로 두고
         // 그 다음에는 cover, cover song, 커버
 
-        search.setMaxResults(10L); // 검색제한 갯수 원하면 하기
+        search.setMaxResults(5L); // 검색제한 갯수 원하면 하기
 
         SearchListResponse searchResponse = search.execute();
         return searchResponse.toPrettyString();
+
+        //GSON 이용
+//        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//        String prettyJson = gson.toJson(gson);
+
+//        return prettyJson;
     }
 
     public List<PlaylistItem> getPlaylistItems(String playlistId) throws IOException {
