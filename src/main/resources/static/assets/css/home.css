@@ -9,8 +9,6 @@
     --color-default:#000000;
     --color-second:#0067ac;
     --color-white:#fff;
-    --color-body:#e4e9f7;
-    --color-light:#e0e0e0;
 }
 
 a{
@@ -83,6 +81,7 @@ img {
     background: var(--color-default);
     flex-grow: 1;
 }
+
 
 .list-container {
     display: grid;
