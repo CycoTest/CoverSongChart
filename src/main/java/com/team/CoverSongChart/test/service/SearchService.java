@@ -1,16 +1,13 @@
 package com.team.CoverSongChart.test.service;
 
 import com.google.api.services.youtube.YouTube;
-import com.google.api.services.youtube.model.PlaylistItem;
-import com.google.api.services.youtube.model.PlaylistItemListResponse;
-import com.google.api.services.youtube.model.SearchListResponse;
-import com.google.api.services.youtube.model.VideoListResponse;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.google.api.services.youtube.model.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -63,5 +60,39 @@ public class SearchService {
 
         VideoListResponse videoResponse = videoRequest.execute();
         return videoResponse.toPrettyString();
+    }
+
+
+    // 내꺼 playlist 가져오기 23.11
+
+    public Playlist getPlaylistInfo(String playlistId) {
+        try {
+            // 플레이리스트 정보 가져오기
+            YouTube.Playlists.List playlistsListRequest = youtube.playlists().list("snippet");
+            playlistsListRequest.setId(playlistId); // 플레이리스트 ID 입력
+            PlaylistListResponse playlistsListResponse = playlistsListRequest.execute();
+            return playlistsListResponse.getItems().get(0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+    public List<String> getVideosInPlaylistDetail(String playlistId) {
+        try {
+            YouTube.PlaylistItems.List playlistItemsRequest = youtube.playlistItems().list("snippet");
+            playlistItemsRequest.setPlaylistId(playlistId);
+            PlaylistItemListResponse playlistItemListResponse = playlistItemsRequest.execute();
+
+            List<String> videoList = new ArrayList<>();
+            for (PlaylistItem playlistItem : playlistItemListResponse.getItems())
+                videoList.add(playlistItem.getSnippet().getResourceId().getVideoId());
+
+            return videoList;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Collections.emptyList();
+        }
     }
 }
