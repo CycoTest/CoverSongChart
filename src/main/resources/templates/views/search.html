@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/default}">
+<head>
+    <title>cloneYouTube</title>
+</head>
+<body>
+<th:block layout:fragment="Content">
+<!--Main-->
+
+<!-- 최근에 들은 트랙 -->
+<section class="recent-section">
+    <div th:each="result : ${results}">
+        <h2 th:text="${result.snippet.title}"></h2>
+        <p th:text="${result.snippet.description}"></p>
+    </div>
+</section>
+</th:block>
+</body>
+</html>

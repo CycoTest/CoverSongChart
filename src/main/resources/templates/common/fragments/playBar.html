@@ -2,49 +2,37 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <th:block th:fragment="PlayBarFragment">
 <!-- Music Player -->
-<div class="music-player" >
-
-    <!-- Song Info -->
-    <audio id="song">
-        <source src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/summer.mp3?raw=true" type="audio/mpeg">
-    </audio>
-
-    <!-- Progress bar for current song -->
-    <div class="progress-container">
-        <label class="progress-label">
-            <input type="range" value="0" min="0" max="100" id="progress">
-        </label>
+<div class="master_play">
+    <div class="wave">
+        <div class="wave1"></div>
+        <div class="wave1"></div>
+        <div class="wave1"></div>
     </div>
-    <!-- Music Controller -->
-    <div class="controls">
-        <div>
-            <i class='bx bx-skip-previous' ></i>
-        </div>
-        <div onclick="playPause()">
-            <i class='bx bx-play' id="play" ></i>
-        </div>
-        <div>
-            <i class='bx bx-skip-next' ></i>
-        </div>
+    <img src="../assets/images/HellScrim.png" alt="Alan" id="poster_master_play">
+    <h5 id="title">For The Horde<br>
+        <div class="subtitle">HellScream</div>
+    </h5>
+    <div class="icon">
+        <i class="bx bx-skip-previous-circle" id="back"></i>
+        <i class="bx bx-play-circle" id="masterPlay" ></i>
+        <i class="bx bx-skip-next-circle" id="next" ></i>
     </div>
-
-    <!-- other settings -->
-    <div class="other-features">
-        <i class='bx bx-volume-full' ></i>
-        <i class='bx bx-repeat'></i>
-        <i class='bx bx-shuffle' ></i>
+    <span id="currentStart">0:00</span>
+    <div class="bar">
+        <input type="range" id="seek" min="0" value="0" max="100">
+        <div class="bar2" id="bar2"></div>
+        <div class="dot"></div>
     </div>
+    <span id="currentEnd">0:00</span>
 
-    <!-- Volume Panel -->
-    <div class="volume-panel">
-        <div class="input-div">
-            <div class="volume-input-div">
-                <label class="volume-label">
-                    <div class="volume-progress"></div>
-                </label>
-            </div>
-        </div>
+    <div class="vol">
+        <i class="bx bx-volume-full" id="vol_icon"></i>
+        <input type="range" id="vol" min="0" value="30" max="100">
+        <div class="vol_bar"></div>
+        <div class="dot" id="vol_dot"></div>
     </div>
 </div>
+
+<script src="../javaScript/script.js" defer></script>
 </th:block>
 </html>
