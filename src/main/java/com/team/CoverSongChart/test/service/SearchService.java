@@ -1,7 +1,9 @@
 package com.team.CoverSongChart.test.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.*;
+import com.team.CoverSongChart.test.DTO.playlistInfoDTO.A_PlaylistItemDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,7 @@ import java.util.List;
 public class SearchService {
 
     private final YouTube youtube;
+    private final ObjectMapper objectMapper;
 
     public String searchAll(String keyword) throws IOException {
         YouTube.Search.List search = youtube.search().list("snippet");
@@ -27,6 +30,63 @@ public class SearchService {
         SearchListResponse searchResponse = search.execute();
         return searchResponse.toPrettyString();
     }
+
+
+
+
+    ///////////////
+
+    // playlist 겉 표지
+    // http://localhost:8080/csc/playlist?playlistId=PLOlzssqbfJZhUp5FFVHYaepkba__DfMTC
+    public Playlist getPlaylist(String playlistId) throws IOException {
+        return youtube.playlists().list("snippet")
+                .setId(playlistId)
+                .execute()
+                .getItems()
+                .get(0);
+    }
+
+    // playlist 안에 담긴 videoId에 대한 정보만 가져오기
+    // 아래 예시
+    // http://localhost:8080/csc/playlistInfo?playlistId=PLOlzssqbfJZhUp5FFVHYaepkba__DfMTC
+//    public PlaylistItemListResponse getPlaylistInfoInVideo(String playlistId) throws IOException {
+//        return youtube.playlistItems().list("snippet")
+//                .setPlaylistId(playlistId)
+//                .execute();
+//    }
+
+    public A_PlaylistItemDTO getPlaylistInfoInVideo(String playlistId) throws  IOException {
+        PlaylistItemListResponse playlistItemListResponse = youtube.playlistItems().list("snippet")
+                .setPlaylistId(playlistId)
+                .execute();
+
+        String jsonResponse = objectMapper.writeValueAsString(playlistItemListResponse);
+        A_PlaylistItemDTO playlistItemDTO = objectMapper.readValue(jsonResponse, A_PlaylistItemDTO.class);
+
+        return playlistItemDTO;
+    }
+
+    // VideoId에 대한 것 가져오기
+    // 아래 예시
+    // http://localhost:8080/csc/videoInfo?videoId=3gn31nL_UVc
+    public Video getVideoInfo(String videoId) {
+        try {
+            YouTube.Videos.List videosListRequest = youtube.videos().list("snippet");
+            videosListRequest.setId(videoId);
+            VideoListResponse videoListResponse = videosListRequest.execute();
+            return videoListResponse.getItems().get(0);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+
+
+
+
+
 
     public List<PlaylistItem> getPlaylistItems(String playlistId) throws IOException {
         YouTube.PlaylistItems.List request = youtube.playlistItems().list("snippet");
@@ -46,43 +106,6 @@ public class SearchService {
 
         VideoListResponse videoResponse = videoRequest.execute();
         return videoResponse.toPrettyString();
-    }
-
-
-    ///////////////
-
-    // playlist 겉 표지
-    // http://localhost:8080/csc/playlist?playlistId=PLOlzssqbfJZhUp5FFVHYaepkba__DfMTC
-    public Playlist getPlaylist(String playlistId) throws IOException {
-        return youtube.playlists().list("snippet")
-                .setId(playlistId)
-                .execute()
-                .getItems()
-                .get(0);
-    }
-
-    // playlist 안에 담긴 videoId에 대한 정보만 가져오기
-    // 아래 예시
-    // http://localhost:8080/csc/playlistInfo?playlistId=PLOlzssqbfJZhUp5FFVHYaepkba__DfMTC
-    public PlaylistItemListResponse getPlaylistInfoInVideo(String playlistId) throws IOException {
-        return youtube.playlistItems().list("snippet")
-                .setPlaylistId(playlistId)
-                .execute();
-    }
-
-    // VideoId에 대한 것 가져오기
-    // 아래 예시
-    // http://localhost:8080/csc/videoInfo?videoId=3gn31nL_UVc
-    public Video getVideoInfo(String videoId) {
-        try {
-            YouTube.Videos.List videosListRequest = youtube.videos().list("snippet");
-            videosListRequest.setId(videoId);
-            VideoListResponse videoListResponse = videosListRequest.execute();
-            return videoListResponse.getItems().get(0);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
 
